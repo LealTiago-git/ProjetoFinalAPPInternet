@@ -1,43 +1,31 @@
 .cabecalho1 {
-    background-color: rgb(000, 111, 205);
-    display: flex;
-    flex-direction: column;
-    min-width: 100vw;
-    max-width: 100vw;
-    min-height: 100vh;
-    max-height: 100vh;  
-    align-items: center;
-  }
-  .perfil {
-    display: flex;
-    flex-direction: row;
-    gap: 15vw;
-    padding: 10px;
-    align-items: center;
-  }
-  .trofeus1 {
-    display: flex;
-    flex-direction: row;
-    width: 30%;
-  }
-  .platina {
-    padding: 2vw;
-    color: rgb(205, 205, 205);
-  }
-  .ouro {
-    padding: 2vw;
-    color: rgb(218, 165, 32);
-  }
-  .prata {
-    padding: 2vw;
-    color: rgb(170, 170, 170);
-  }
-  .bronze {
-    padding: 2vw;
-    color: rgb(205, 127, 50);
-  }
-  .icon {
-    width: 80px;
-    height: 80px;
-  }
-  
+  background-color: rgb(000, 111, 205);
+  display: flex;
+  flex-direction: column;
+  min-width: 100vw;
+  max-width: 100vw;
+  align-items: center;
+  justify-content: space-between;
+}
+.perfil {
+  display: flex;
+  flex-direction: row;
+  min-width: 90vw;
+  max-width: 90vw;
+  gap: 15vw;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+.mainpage {
+  background-image: linear-gradient(
+    rgb(000, 111, 205),
+    #00335E,
+    rgb(000, 111, 205)
+  );
+  min-height: 70vh;
+  max-height: 70vh;
+  min-width: 100vw;
+  max-width: 100vw;
+}
+/* b3dcff */

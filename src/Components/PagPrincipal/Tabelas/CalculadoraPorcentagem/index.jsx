@@ -16,7 +16,7 @@ function CalculadoraPorcentagem({ total, tobtidosTotal }) {
     }
   };
 
-  return <div>Porcentagem: {porcentagem}%</div>;
+  return <div>{porcentagem}%</div>;
 }
 
 export default CalculadoraPorcentagem;

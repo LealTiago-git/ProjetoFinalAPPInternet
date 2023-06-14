@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./PrimeiraTabela.css";
 import CalculadoraPorcentagem from "../CalculadoraPorcentagem/index";
 
-function TabelaDinamica() {
+function PrimeiraTabela() {
   const [tableData, setTableData] = useState([
     {
       id: 0,
@@ -76,19 +76,21 @@ function TabelaDinamica() {
   };
 
   return (
-    <div className="container" style={{ color: "black" }}>
+    <div className="container2" style={{ color: "black" }}>
       <div
         className="row clearfix"
         style={{ overflowY: "auto", maxHeight: "70vh" }}
       >
         <div className="col-md-12 table-responsive">
-          <table className="table table-bordered table-hover table-sortable">
+          <table
+            className="table table-bordered table-hover table-sortable"
+            style={{ minWidth: "50vw" }}
+          >
             <thead>
               <tr>
                 <th className="text-center">Jogos</th>
                 <th className="text-center">Troféus Totais</th>
                 <th className="text-center">Troféus Atuais</th>
-                <th className="text-center"></th>
               </tr>
             </thead>
             <tbody>
@@ -102,6 +104,10 @@ function TabelaDinamica() {
                       onChange={(e) => handleInputChange(e, index)}
                       placeholder="Nome"
                       className="form-control"
+                      style={{
+                        boxShadow: "0px 0px 5px black",
+                        minWidth: "15vw",
+                      }}
                     />
                   </td>
                   <td>
@@ -112,6 +118,10 @@ function TabelaDinamica() {
                       onChange={(e) => handleInputChange(e, index)}
                       placeholder="0"
                       className="form-control"
+                      style={{
+                        boxShadow: "0px 0px 5px black",
+                        minWidth: "1vw",
+                      }}
                     />
                   </td>
                   <td>
@@ -122,6 +132,10 @@ function TabelaDinamica() {
                       onChange={(e) => handleInputChange(e, index)}
                       placeholder="0"
                       className="form-control"
+                      style={{
+                        boxShadow: "0px 0px 5px black",
+                        minWidth: "1vw",
+                      }}
                     />
                   </td>
                   <td>
@@ -144,17 +158,39 @@ function TabelaDinamica() {
       </div>
       <button
         className="btn btn-primary float-right"
-        style={{ color: "black" }}
+        style={{ color: "black", maxWidth: "50.5vw" }}
         onClick={handleAddRow}
       >
         Adicionar Um Jogo
       </button>
-      <div>Total: {Total}</div>
-      <div>Totais Obtidos: {tobtidosTotal}</div>
-      <div>Platinas: {linhasIguais}</div>
-      <CalculadoraPorcentagem total={Total} tobtidosTotal={tobtidosTotal} />
+      <div style={{ display: "flex", gap: "10vw" }}>
+        <div>Troféus Totais: {Total}</div>
+        <div>Troféus Obtidos: {tobtidosTotal}</div>
+      </div>
+      <div
+        style={{
+          position: "absolute",
+          marginRight: "70vw",
+          marginBottom: "79vh",
+          display: "flex",
+          flexDirection: "row",
+          gap: "1vw",
+          textAlign: "center",
+          alignItems: "center",
+          justifyContent:"center"
+        }}
+      >
+        <div>
+          <img
+            src="thicon.png"
+            style={{ objectFit: "contain", width: "1vw" }}
+          />
+          : {linhasIguais}
+        </div>
+        <CalculadoraPorcentagem total={Total} tobtidosTotal={tobtidosTotal} />
+      </div>
     </div>
   );
 }
 
-export default TabelaDinamica;
+export default PrimeiraTabela;

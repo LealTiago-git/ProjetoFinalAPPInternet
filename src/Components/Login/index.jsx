@@ -1,9 +1,20 @@
 import "./Login.css";
-import Cadastrar from "./Cadastrar/index";
+
 function Login(props) {
   return (
     <>
-      <form action="">
+      <form
+        action=""
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          minWidth: "100vw",
+          maxWidth: "100vw",
+          backgroundImage:
+            "linear-gradient(rgb(000, 111, 205), #B3DCFF, rgb(000, 111, 205))",
+        }}
+      >
         <div className="container">
           <span>
             <b> Usuário </b>
@@ -25,29 +36,57 @@ function Login(props) {
             autoComplete="current-password"
             placeholder="Enter Password"
           />
-          <input name="checkboxlogin" id="checkboxlogin" type="checkbox" defaultChecked />
-          <label htmlFor="checkboxlogin">Continuar Conectado</label>
-          <a
-            onClick={() => {
-              props.setMenu("pagprincipal");
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              flexDirection: "row",
+              gap: "1vw",
             }}
           >
-            LOGIN
-          </a>
-          <a
-            onClick={() => {
-              props.setMenu("cadastro");
-            }}
-          >
-            Cadastrar
-          </a>
-          <a
-            onClick={() => {
-              props.setMenu("esqueceu");
-            }}
-          >
-            esqueceu
-          </a>
+            <label htmlFor="checkboxlogin">Continuar Conectado</label>
+            <input
+              name="checkboxlogin"
+              id="checkboxlogin"
+              type="checkbox"
+              defaultChecked
+              style={{
+                margin: "0px",
+                width: "1vw",
+                height: "1vh",
+                padding: "0px",
+              }}
+            />
+          </div>
+          <div style={{ display: "flex", gap: " 5vw" }}>
+            <button
+              className="btn btn-primary"
+              style={{ color: "black", minHeight: "7vh" }}
+              onClick={() => {
+                props.setMenu("cadastro");
+              }}
+            >
+              Cadastrar
+            </button>
+            <button
+              className="btn btn-primary"
+              style={{ color: "black", minHeight: "7vh" }}
+              onClick={() => {
+                props.setMenu("pagprincipal");
+              }}
+            >
+              Login
+            </button>
+            <button
+              className="btn btn-primary"
+              style={{ color: "black", minHeight: "7vh" }}
+              onClick={() => {
+                props.setMenu("esqueceu");
+              }}
+            >
+              Esqueceu a Senha?
+            </button>
+          </div>
         </div>
       </form>
 
